@@ -1,0 +1,41 @@
+
+
+<!-- one way data binding  (event binding)-->
+<!-- <label>Server Name {{serverName}}</label>
+<input type="text"
+ class="form-control"
+ (input)="onUpdateServerName($event)"
+ > -->
+
+<!-- two way data binding  (event binding)-->
+<!-- we combine property and event binding -->
+<input type="text"
+ class="form-control"
+ [(ngModel)]="serverName1"
+ >
+<label>Server Name {{serverName1}}</label> 
+<br>
+
+<!-- <!-- <app-server></app-server> -->
+<!-- property binding -->
+<button class="btn btn-primary" 
+[disabled]="!allowNewServer"
+(click)="onCreateServer()"
+>Add service </button>  
+
+<!-- string interpolation -->
+<p>{{allowNewServer}}</p>
+<p [innerText]="allowNewServer"></p>
+
+<!-- event binding -->
+<p>{{serverCreationStatus}}</p>
+
+
+
+
+<!-- directive  -->
+<p *ngIf=" ">server was created, server name is {{serverName1}}</p>
+
+<app-server></app-server>       
+ <!-- <div app-server></div> --> 
+ <!-- <div class="app-server"></div> -->
